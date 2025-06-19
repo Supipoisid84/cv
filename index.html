@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Kreimann CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            font-size: 11pt;
+            max-width: 210mm;
+            min-height: 297mm;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .contact-info {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 3px;
+        }
+        
+        .subsection-title {
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 8px;
+        }
+        
+        .date {
+            font-weight: bold;
+        }
+        
+        .institution {
+            font-style: italic;
+        }
+        
+        ul {
+            margin: 5px 0;
+            padding-left: 18px;
+        }
+        
+        li {
+            margin-bottom: 2px;
+        }
+        
+        .objective {
+            font-style: italic;
+            text-align: justify;
+        }
+        
+        .praktika-details {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin-top: 8px;
+            font-size: 10pt;
+        }
+        
+        .export-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .export-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .export-btn:hover {
+            background: #2980b9;
+        }
+        
+        .export-btn.word {
+            background: #2c5530;
+        }
+        
+        .export-btn.word:hover {
+            background: #1e3d21;
+        }
+        
+        @media print {
+            .export-buttons {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="export-buttons">
+        <button class="export-btn" onclick="exportToPDF()">PDF</button>
+        <button class="export-btn word" onclick="exportToWord()">Word</button>
+    </div>
+    
+    <div class="header">
+        <div class="name">Alex Kreimann</div>
+        <div class="contact-info">
+            Telefon: +372 5889 2883<br>
+            E-mail: alex@hkhk.edu.ee<br>
+            Aadress: Majaka 54, Tallinn, Eesti
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Haridus</div>
+        <div class="education-item">
+            <span class="date">2024-2025</span> | <span class="institution">Haapsalu Kutsehariduskeskus</span><br>
+            IT-süsteemide nooremspetsialist, 1. kursus
+        </div>
+        <div class="education-item">
+            <span class="date">2018-2023</span> | <span class="institution">Tallinna Konstantin Pätsi Vabaõhukool</span><br>
+            Keskharidus
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Teadmised ja oskused</div>
+        
+        <div class="subsection-title">Tehnilised oskused:</div>
+        <ul>
+            <li>Windows operatsioonisüsteemid (paigaldamine, haldamine)</li>
+            <li>Arvutivõrgud ja võrguseadmed (põhiteadmised)</li>
+            <li>IT-riistvara (paigaldamine, diagnostika)</li>
+            <li>Programmeerimise alused</li>
+            <li>Linux (iseõpe Udemy kursuste kaudu)</li>
+        </ul>
+        
+        <div class="subsection-title">Keeled:</div>
+        <ul>
+            <li>Eesti keel (emakeel)</li>
+            <li>Inglise keel (keskmisel tasemel)</li>
+        </ul>
+        
+        <div class="subsection-title">Muud oskused:</div>
+        <ul>
+            <li>Meeskonnatöö</li>
+            <li>Probleemide lahendamine</li>
+            <li>Arvutihooldus</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Kogemus</div>
+        <div class="experience-item">
+            Hetkel koolis - otsin esimest praktikakohta
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Huvid ja enesearendamine</div>
+        <ul>
+            <li>Udemy Linuxi kursused vabal ajal</li>
+            <li>IT-süsteemide katsetamine kodus</li>
+            <li>Tehnoloogia uudiste jälgimine</li>
+            <li>Arvutiriistvara uurimine ja parandamine</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Eesmärk</div>
+        <div class="objective">
+            Otsin IT-tehniku praktikakohta, kus saaksin rakendada koolis õpitut ja omandada praktilisi kogemusi. Olen motiveeritud õppima ja panustama meeskonna töösse.
+        </div>
+        
+        <div class="praktika-details">
+            <strong>Praktika üksikasjad:</strong><br>
+            Praktika periood: oktoober-detsember 2025<br>
+            Maht: 390 akadeemilist tundi (225 tundi ettevõttes)<br>
+            Võimalik alustada ka varem (välja arvatud juuli)
+        </div>
+    </div>
+
+    <script>
+        function exportToPDF() {
+            // Hide the export buttons
+            const buttons = document.querySelector('.export-buttons');
+            buttons.style.display = 'none';
+            
+            // Print the page
+            window.print();
+            
+            // Show the buttons again after a delay
+            setTimeout(() => {
+                buttons.style.display = 'flex';
+            }, 1000);
+        }
+        
+        function exportToWord() {
+            // Create a Word-compatible HTML document
+            const htmlContent = `
+            <!DOCTYPE html>
+            <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+            <head>
+                <meta charset='utf-8'>
+                <title>Alex Kreimann CV</title>
+                <!--[if gte mso 9]>
+                <xml>
+                    <w:WordDocument>
+                        <w:View>Print</w:View>
+                        <w:Zoom>90</w:Zoom>
+                        <w:DoNotPromptForConvert/>
+                        <w:DoNotShowInsertionsAndDeletions/>
+                    </w:WordDocument>
+                </xml>
+                <![endif]-->
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        line-height: 1.4;
+                        margin: 2cm;
+                        font-size: 11pt;
+                    }
+                    .header {
+                        text-align: center;
+                        margin-bottom: 25px;
+                        border-bottom: 2px solid #333;
+                        padding-bottom: 15px;
+                    }
+                    .name {
+                        font-size: 18pt;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                    .contact-info {
+                        font-size: 10pt;
+                        line-height: 1.3;
+                    }
+                    .section {
+                        margin-bottom: 18px;
+                    }
+                    .section-title {
+                        font-size: 12pt;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-bottom: 8px;
+                        border-bottom: 1px solid #999;
+                        padding-bottom: 3px;
+                    }
+                    .subsection-title {
+                        font-weight: bold;
+                        margin-top: 8px;
+                        margin-bottom: 4px;
+                    }
+                    .date {
+                        font-weight: bold;
+                    }
+                    .institution {
+                        font-style: italic;
+                    }
+                    .praktika-details {
+                        background-color: #f5f5f5;
+                        padding: 10px;
+                        border-left: 3px solid #666;
+                        margin-top: 8px;
+                        font-size: 10pt;
+                    }
+                    ul {
+                        margin: 5px 0;
+                        padding-left: 18px;
+                    }
+                    li {
+                        margin-bottom: 2px;
+                    }
+                </style>
+            </head>
+            <body>
+                ${document.querySelector('body').innerHTML.replace(/<div class="export-buttons">.*?<\/div>/s, '')}
+            </body>
+            </html>`;
+            
+            const blob = new Blob([htmlContent], {
+                type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            });
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Alex_Kreimann_CV.doc';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
