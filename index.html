@@ -51,8 +51,9 @@
             text-transform: uppercase;
             margin-bottom: 8px;
             color: #2c3e50;
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 3px;
+            background-color: #ecf0f1;
+            padding: 4px 6px;
+            border-radius: 4px;
         }
         
         .subsection-title {
@@ -154,7 +155,7 @@
     <div class="section">
         <div class="section-title">Eesmärk</div>
         <div class="objective">
-            Otsin tehnilise toe praktikakohta, kus saaksin rakendada koolis õpitut ja omandada praktilisi kogemusi. Olen motiveeritud õppima ja panustama meeskonna töösse. Valmis alustama augustist 2025.
+            Otsin tehnilise toe praktikakohta, kus saaksin rakendada koolis õpitut ja omandada praktilisi kogemusi süsteemide halduse ja monitoorimise vallas. Olen suvel läbinud erinevaid Linuxi ja Windowsi administreerimise koolitusi (CBT NUGGETS), katsetanud Zabbixi monitooringut testkeskkonnas ning loonud algtasemel andmebaase. Mind huvitab väga süsteemide jälgimine ja töökindluse tagamine. Valmis alustama augustist 2025.
         </div>
         
         <div class="praktika-details">
@@ -179,15 +180,15 @@
 
     <div class="section">
         <div class="section-title">Teadmised ja oskused</div>
-        
         <div class="subsection-title">Tehnilised oskused:</div>
         <ul>
             <li>Windows operatsioonisüsteemid (paigaldamine, haldamine)</li>
             <li>Linux (paigaldamine, haldamine)</li>
+            <li>Süsteemide monitooring (Zabbix, testkeskkond)</li>
             <li>Arvutivõrgud ja võrguseadmed (põhiteadmised)</li>
             <li>IT-riistvara (paigaldamine, diagnostika)</li>
-            <li>Mikrokontrollerid (Arduino, põhiteadmised)</li>
             <li>Kontoritarkvara (MS Office 365)</li>
+            <li>Algteadmised andmebaasidest (loomine, haldus)</li>
             <li>Programmeerimise alused ja versioonihaldus (GitHub)</li>
             <li>Veebiarendus (HTML, CSS, Bootstrap)</li>
         </ul>
@@ -202,19 +203,21 @@
         <ul>
             <li>Tähelepanelik detailidele</li>
             <li>Hoolikas ja süstemaatiline tööstiil</li>
+            <li>Hea suhtlemisoskus ja valmisolek klienditoeks</li>
             <li>Arvutihooldus</li>
         </ul>
     </div>
 
     <div class="section">
         <div class="section-title">Huvid ja enesearendamine</div>
-        
-        <div class="subsection-title">Läbitud Udemy kursused:</div>
+        <div class="subsection-title">Koolitused ja kursused:</div>
         <ul>
-            <li>Linux administratsiooni kursused</li>
-            <li>Flutter Flow</li>
+            <li>Linux administratsiooni koolitused (suvi 2025)</li>
+            <li>CBT NUGGETS Windows Server Administration</li>
+            <li>Zabbix monitoorimise põhikursus (testkeskkonnas katsetatud)</li>
+            <li>Udemy kursused: Linux, Flutter Flow</li>
         </ul>
-        
+
         <div class="subsection-title">Kodus katsetatud süsteemid ja projektid:</div>
         <ul>
             <li>Ubuntu serveri paigaldamine ja seadistamine VirtualBox keskkonnas</li>
@@ -223,116 +226,28 @@
             <li>SSH ühenduste seadistamine ja kasutamine</li>
             <li>Failiserverite (FTP/SFTP) loomine ja kasutamine</li>
         </ul>
-        
+
         <div class="subsection-title">Muud huvid:</div>
         <ul>
             <li>Tehnoloogia uudiste jälgimine</li>
             <li>Arvutiriistvara uurimine ja parandamine</li>
+            <li>Süsteemide monitooringu ja andmebaaside halduse õppimine</li>
         </ul>
     </div>
 
     <script>
         function exportToPDF() {
-            // Hide the export buttons
             const buttons = document.querySelector('.export-buttons');
             buttons.style.display = 'none';
-            
-            // Print the page
             window.print();
-            
-            // Show the buttons again after a delay
             setTimeout(() => {
                 buttons.style.display = 'flex';
             }, 1000);
         }
         
         function exportToWord() {
-            // Create a Word-compatible HTML document
-            const htmlContent = `
-            <!DOCTYPE html>
-            <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-            <head>
-                <meta charset='utf-8'>
-                <title>Alex Kreimann CV</title>
-                <!--[if gte mso 9]>
-                <xml>
-                    <w:WordDocument>
-                        <w:View>Print</w:View>
-                        <w:Zoom>90</w:Zoom>
-                        <w:DoNotPromptForConvert/>
-                        <w:DoNotShowInsertionsAndDeletions/>
-                    </w:WordDocument>
-                </xml>
-                <![endif]-->
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        line-height: 1.4;
-                        margin: 2cm;
-                        font-size: 11pt;
-                    }
-                    .header {
-                        text-align: center;
-                        margin-bottom: 25px;
-                        border-bottom: 2px solid #333;
-                        padding-bottom: 15px;
-                    }
-                    .name {
-                        font-size: 18pt;
-                        font-weight: bold;
-                        margin-bottom: 8px;
-                    }
-                    .contact-info {
-                        font-size: 10pt;
-                        line-height: 1.3;
-                    }
-                    .section {
-                        margin-bottom: 18px;
-                    }
-                    .section-title {
-                        font-size: 12pt;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        margin-bottom: 8px;
-                        border-bottom: 1px solid #999;
-                        padding-bottom: 3px;
-                    }
-                    .subsection-title {
-                        font-weight: bold;
-                        margin-top: 8px;
-                        margin-bottom: 4px;
-                    }
-                    .date {
-                        font-weight: bold;
-                    }
-                    .institution {
-                        font-style: italic;
-                    }
-                    .praktika-details {
-                        background-color: #f5f5f5;
-                        padding: 10px;
-                        border-left: 3px solid #666;
-                        margin-top: 8px;
-                        font-size: 10pt;
-                    }
-                    ul {
-                        margin: 5px 0;
-                        padding-left: 18px;
-                    }
-                    li {
-                        margin-bottom: 2px;
-                    }
-                </style>
-            </head>
-            <body>
-                ${document.querySelector('body').innerHTML.replace(/<div class="export-buttons">.*?<\/div>/s, '')}
-            </body>
-            </html>`;
-            
-            const blob = new Blob([htmlContent], {
-                type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-            });
-            
+            const htmlContent = `<!DOCTYPE html><html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Alex Kreimann CV</title><style>body {font-family: Arial, sans-serif; line-height: 1.4; margin: 2cm; font-size: 11pt;} .header {text-align: center; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 15px;} .name {font-size: 18pt; font-weight: bold; margin-bottom: 8px;} .contact-info {font-size: 10pt; line-height: 1.3;} .section {margin-bottom: 18px;} .section-title {font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; border-bottom: 1px solid #999; padding-bottom: 3px;} .subsection-title {font-weight: bold; margin-top: 8px; margin-bottom: 4px;} .date {font-weight: bold;} .institution {font-style: italic;} .praktika-details {background-color: #f5f5f5; padding: 10px; border-left: 3px solid #666; margin-top: 8px; font-size: 10pt;} ul {margin: 5px 0; padding-left: 18px;} li {margin-bottom: 2px;}</style></head><body>${document.querySelector('body').innerHTML.replace(/<div class="export-buttons">.*?<\/div>/s, '')}</body></html>`;
+            const blob = new Blob([htmlContent], {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
