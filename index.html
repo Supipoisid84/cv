@@ -9,10 +9,10 @@
             size: A4;
             margin: 2cm;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.4;
+            line-height: 1.45;
             margin: 0;
             padding: 20px;
             color: #333;
@@ -20,31 +20,32 @@
             max-width: 210mm;
             min-height: 297mm;
             box-sizing: border-box;
+            background: #fff;
         }
-        
+
         .header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             border-bottom: 2px solid #333;
-            padding-bottom: 15px;
+            padding-bottom: 14px;
         }
-        
+
         .name {
             font-size: 24pt;
             font-weight: bold;
             margin-bottom: 8px;
             color: #2c3e50;
         }
-        
+
         .contact-info {
             font-size: 10pt;
-            line-height: 1.3;
+            line-height: 1.4;
         }
-        
+
         .section {
             margin-bottom: 18px;
         }
-        
+
         .section-title {
             font-size: 12pt;
             font-weight: bold;
@@ -55,47 +56,42 @@
             padding: 4px 6px;
             border-radius: 4px;
         }
-        
+
         .subsection-title {
             font-weight: bold;
             margin-top: 8px;
             margin-bottom: 4px;
         }
-        
+
         .education-item, .experience-item {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        
+
+        .role-line {
+            font-weight: bold;
+        }
+
         .date {
             font-weight: bold;
         }
-        
+
         .institution {
             font-style: italic;
         }
-        
+
         ul {
             margin: 5px 0;
             padding-left: 18px;
         }
-        
+
         li {
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
-        
-        .objective {
-            font-style: italic;
+
+        .profile {
             text-align: justify;
         }
-        
-        .praktika-details {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-left: 3px solid #3498db;
-            margin-top: 8px;
-            font-size: 10pt;
-        }
-        
+
         .export-buttons {
             position: fixed;
             top: 20px;
@@ -104,7 +100,7 @@
             display: flex;
             gap: 10px;
         }
-        
+
         .export-btn {
             background: #3498db;
             color: white;
@@ -114,19 +110,19 @@
             cursor: pointer;
             font-size: 12px;
         }
-        
+
         .export-btn:hover {
             background: #2980b9;
         }
-        
+
         .export-btn.word {
             background: #2c5530;
         }
-        
+
         .export-btn.word:hover {
             background: #1e3d21;
         }
-        
+
         @media print {
             .export-buttons {
                 display: none;
@@ -142,38 +138,47 @@
         <button class="export-btn" onclick="exportToPDF()">PDF</button>
         <button class="export-btn word" onclick="exportToWord()">Word</button>
     </div>
-    
+
     <div class="header">
         <div class="name">Alex Kreimann</div>
         <div class="contact-info">
             Telefon: +372 5889 2883<br>
             E-mail: alex@hkhk.edu.ee<br>
-            Aadress: Majaka 54, Tallinn, Eesti
+            Asukoht: Tallinn, Eesti
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Eesmärk</div>
-        <div class="objective">
-            Otsin IT-süsteemide nooremspetsialisti positiooni, kus saaksin rakendada koolis õpitut ja omandada praktilisi kogemusi süsteemide halduse ja monitoorimise vallas. Olen suvel läbinud erinevaid Linuxi ja Windowsi administreerimise koolitusi (CBT NUGGETS), katsetanud Zabbixi monitooringut testkeskkonnas ning loonud algtasemel andmebaase. Mind huvitab väga süsteemide jälgimine ja töökindluse tagamine. Valmis alustama augustist 2025.
+        <div class="section-title">Profiil</div>
+        <div class="profile">
+            Õpin Haapsalu Kutsehariduskeskuses IT-süsteemide nooremspetsialisti erialal ning otsin võimalust töötada või praktiseerida IT klienditoe, tööjaamade halduse või süsteemiadministreerimise valdkonnas. Mul on praktiline kogemus kasutajatoe, tööjaamade seadistamise ja tarkvara paigaldamisega ning huvi Linuxi, Windowsi, süsteemide monitoorimise ja töökindluse vastu.
         </div>
-        
-        <div class="praktika-details">
-            <strong>Praktika üksikasjad:</strong><br>
-            Praktika periood: oktoober-detsember 2025<br>
-            Maht: 390 akadeemilist tundi (225 tundi ettevõttes)<br>
-            Võimalik alustada oktoobrist.
+    </div>
+
+    <div class="section">
+        <div class="section-title">Töökogemus / Praktika</div>
+        <div class="experience-item">
+            <div class="role-line">IT klienditoe praktikant</div>
+            <span class="date">10.2025 - 12.2025</span> | <span class="institution">Sihtasutus Haapsalu Neuroloogiline Rehabilitatsioonikeskus</span><br>
+            Haapsalu
+            <ul>
+                <li>Aitasin kasutajaid igapäevaste IT-murede lahendamisel ja tööjaamade kasutamise toetamisel.</li>
+                <li>Seadistasin ja hooldasin arvuteid ning lisaseadmeid vastavalt juhendajate juhistele.</li>
+                <li>Paigaldasin ja uuendasin tööks vajalikke programme ning kontrollisin seadmete töökorras olekut.</li>
+                <li>Toetasin töökohtade ettevalmistamist kasutajatele, sh põhisätete kontrolli ja seadmete valmisolekut.</li>
+                <li>Dokumenteerisin lihtsamaid juhtumeid ja andsin keerulisemad probleemid edasi IT-spetsialistidele.</li>
+            </ul>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Haridus</div>
         <div class="education-item">
-            <span class="date">2024-2025</span> | <span class="institution">Haapsalu Kutsehariduskeskus</span><br>
-            IT-süsteemide nooremspetsialist, 1. kursus
+            <span class="date">2024 - praegu</span> | <span class="institution">Haapsalu Kutsehariduskeskus</span><br>
+            IT-süsteemide nooremspetsialist
         </div>
         <div class="education-item">
-            <span class="date">2018-2023</span> | <span class="institution">Tallinna Konstantin Pätsi Vabaõhukool</span><br>
+            <span class="date">2018 - 2023</span> | <span class="institution">Tallinna Konstantin Pätsi Vabaõhukool</span><br>
             Keskharidus
         </div>
     </div>
@@ -182,56 +187,50 @@
         <div class="section-title">Teadmised ja oskused</div>
         <div class="subsection-title">Tehnilised oskused:</div>
         <ul>
-            <li>Windows operatsioonisüsteemid (paigaldamine, haldamine)</li>
-            <li>Linux (paigaldamine, haldamine)</li>
-            <li>Süsteemide monitooring (Zabbix, testkeskkond)</li>
-            <li>Arvutivõrgud ja võrguseadmed (põhiteadmised)</li>
-            <li>IT-riistvara (paigaldamine, diagnostika)</li>
-            <li>Kontoritarkvara (MS Office 365)</li>
-            <li>Algteadmised andmebaasidest (loomine, haldus)</li>
-            <li>Programmeerimise alused ja versioonihaldus (GitHub)</li>
-            <li>Veebiarendus (HTML, CSS, Bootstrap)</li>
+            <li>Windowsi operatsioonisüsteemide paigaldamine ja haldamine</li>
+            <li>Linuxi paigaldamine ja põhihaldus</li>
+            <li>Tööjaamade ja lisaseadmete seadistamine ning hooldus</li>
+            <li>Süsteemide monitooringu põhiteadmised (Zabbix testkeskkonnas)</li>
+            <li>Arvutivõrkude ja võrguseadmete põhiteadmised</li>
+            <li>IT-riistvara paigaldamine ja diagnostika</li>
+            <li>MS Office 365 ja muu kontoritarkvara</li>
+            <li>Algteadmised andmebaasidest</li>
+            <li>GitHub ja versioonihalduse alused</li>
+            <li>HTML, CSS ja Bootstrap</li>
         </ul>
-        
+
         <div class="subsection-title">Keeled:</div>
         <ul>
-            <li>Eesti keel (emakeel)</li>
-            <li>Inglise keel (keskmisel tasemel)</li>
+            <li>Eesti keel - emakeel</li>
+            <li>Inglise keel - kesktase</li>
         </ul>
-        
+
         <div class="subsection-title">Muud oskused:</div>
         <ul>
-            <li>Tähelepanelik detailidele</li>
-            <li>Hoolikas ja süstemaatiline tööstiil</li>
             <li>Hea suhtlemisoskus ja valmisolek klienditoeks</li>
-            <li>Arvutihooldus</li>
+            <li>Hoolikas ja süstemaatiline tööstiil</li>
+            <li>Tähelepanelikkus detailide suhtes</li>
+            <li>Hea õppimisvõime ja huvi enesearendamise vastu</li>
         </ul>
     </div>
 
     <div class="section">
-        <div class="section-title">Huvid ja enesearendamine</div>
+        <div class="section-title">Projektid ja enesearendamine</div>
         <div class="subsection-title">Koolitused ja kursused:</div>
         <ul>
-            <li>Linux administratsiooni koolitused (suvi 2025)</li>
-            <li>CBT NUGGETS Windows Server Administration</li>
-            <li>Zabbix monitoorimise põhikursus (testkeskkonnas katsetatud)</li>
-            <li>Udemy kursused: Linux, Flutter Flow</li>
+            <li>Linuxi administratsiooni koolitused</li>
+            <li>CBT Nuggets Windows Server Administration</li>
+            <li>Zabbixi monitoorimise põhikursus</li>
+            <li>Udemy kursused: Linux, FlutterFlow</li>
         </ul>
 
         <div class="subsection-title">Kodus katsetatud süsteemid ja projektid:</div>
         <ul>
-            <li>Ubuntu serveri paigaldamine ja seadistamine VirtualBox keskkonnas</li>
-            <li>Apache veebiserverite loomine ja haldamine</li>
-            <li>Koduvõrgu seadistamine ja turvalisuse testimine</li>
+            <li>Ubuntu serveri paigaldamine ja seadistamine VirtualBoxi keskkonnas</li>
+            <li>Apache veebiserveri loomine ja haldamine</li>
+            <li>Koduvõrgu seadistamine ja turvalisuse põhialuste katsetamine</li>
             <li>SSH ühenduste seadistamine ja kasutamine</li>
-            <li>Failiserverite (FTP/SFTP) loomine ja kasutamine</li>
-        </ul>
-
-        <div class="subsection-title">Muud huvid:</div>
-        <ul>
-            <li>Tehnoloogia uudiste jälgimine</li>
-            <li>Arvutiriistvara uurimine ja parandamine</li>
-            <li>Süsteemide monitooringu ja andmebaaside halduse õppimine</li>
+            <li>FTP ja SFTP failiserverite loomise põhialused</li>
         </ul>
     </div>
 
@@ -244,10 +243,10 @@
                 buttons.style.display = 'flex';
             }, 1000);
         }
-        
+
         function exportToWord() {
-            const htmlContent = `<!DOCTYPE html><html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Alex Kreimann CV</title><style>body {font-family: Arial, sans-serif; line-height: 1.4; margin: 2cm; font-size: 11pt;} .header {text-align: center; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 15px;} .name {font-size: 18pt; font-weight: bold; margin-bottom: 8px;} .contact-info {font-size: 10pt; line-height: 1.3;} .section {margin-bottom: 18px;} .section-title {font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; border-bottom: 1px solid #999; padding-bottom: 3px;} .subsection-title {font-weight: bold; margin-top: 8px; margin-bottom: 4px;} .date {font-weight: bold;} .institution {font-style: italic;} .praktika-details {background-color: #f5f5f5; padding: 10px; border-left: 3px solid #666; margin-top: 8px; font-size: 10pt;} ul {margin: 5px 0; padding-left: 18px;} li {margin-bottom: 2px;}</style></head><body>${document.querySelector('body').innerHTML.replace(/<div class="export-buttons">.*?<\/div>/s, '')}</body></html>`;
-            const blob = new Blob([htmlContent], {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+            const htmlContent = `<!DOCTYPE html><html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Alex Kreimann CV</title><style>body {font-family: Arial, sans-serif; line-height: 1.45; margin: 2cm; font-size: 11pt;} .header {text-align: center; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 15px;} .name {font-size: 18pt; font-weight: bold; margin-bottom: 8px;} .contact-info {font-size: 10pt; line-height: 1.3;} .section {margin-bottom: 18px;} .section-title {font-size: 12pt; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; border-bottom: 1px solid #999; padding-bottom: 3px;} .subsection-title {font-weight: bold; margin-top: 8px; margin-bottom: 4px;} ul {margin: 5px 0; padding-left: 18px;} li {margin-bottom: 2px;} .date, .role-line {font-weight: bold;} .institution {font-style: italic;}</style></head><body>${document.querySelector('body').innerHTML.replace(/<div class="export-buttons">.*?<\/div>/s, '')}</body></html>`;
+            const blob = new Blob([htmlContent], {type: 'application/msword'});
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
